@@ -150,14 +150,6 @@ a {
   text-shadow: 0 0 18px rgba(19, 232, 255, 0.7);
 }
 
-.nav__cta {
-  padding: 10px 14px;
-  border: 1px solid var(--magenta);
-  color: var(--text);
-  text-decoration: none;
-  box-shadow: var(--shadow-magenta);
-}
-
 .hero {
   position: relative;
   min-height: min(720px, calc(100svh - 104px));
@@ -660,79 +652,14 @@ p {
 
 .delivery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .info-panel {
   padding: 22px;
-}
-
-.info-panel--wide {
-  grid-column: span 2;
-}
-
-.steps-list,
-.timeline {
-  padding-left: 1.2rem;
-  color: var(--muted);
-}
-
-.steps-list li,
-.timeline li {
-  margin-bottom: 10px;
-}
-
-code {
-  padding: 2px 5px;
-  border: 1px solid rgba(120, 246, 255, 0.26);
-  background: rgba(19, 232, 255, 0.08);
-  color: var(--cyan);
-  font-family: Consolas, Monaco, monospace;
-}
-
-.timeline {
-  list-style: none;
-  padding-left: 0;
-}
-
-.timeline li {
-  position: relative;
-  padding-left: 28px;
-}
-
-.timeline li::before {
-  content: "";
-  position: absolute;
-  top: 0.45rem;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  border: 2px solid var(--green);
-  background: var(--bg);
-  box-shadow: 0 0 12px rgba(67, 255, 145, 0.74);
-}
-
-.timeline time {
-  color: var(--green);
-  font-weight: 900;
-}
-
-.crap-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.crap-grid p {
-  margin: 0;
-  padding: 14px;
-  border: 1px solid rgba(255, 57, 212, 0.22);
-  background: rgba(255, 57, 212, 0.05);
-}
-
-.crap-grid strong {
-  color: var(--orange);
 }
 
 .muted {
@@ -798,9 +725,6 @@ code {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .info-panel--wide {
-    grid-column: auto;
-  }
 }
 
 @media (max-width: 640px) {
@@ -816,11 +740,6 @@ code {
   .brand__mark {
     width: 30px;
     height: 30px;
-  }
-
-  .nav__cta {
-    padding: 8px 10px;
-    font-size: 0.82rem;
   }
 
   .hero__content,
@@ -841,8 +760,7 @@ code {
     width: 100%;
   }
 
-  .game-grid,
-  .crap-grid {
+  .game-grid {
     grid-template-columns: 1fr;
   }
 
